@@ -1,0 +1,79 @@
+Vector Issue Mails
+
+Python
+argparse: https://docs.python.org/2/library/argparse.html
+wildcards: https://www.educative.io/edpresso/how-to-implement-wildcards-in-python
+timer: https://medium.com/greedygame-engineering/an-elegant-way-to-run-periodic-tasks-in-python-61b7c477b679
+split: https://www.geeksforgeeks.org/python-get-the-string-after-occurrence-of-given-substring/
+set array to null: https://stackoverflow.com/questions/1400608/how-to-empty-a-list-in-python/30087221
+call another script: https://stackoverflow.com/questions/1186789/what-is-the-best-way-to-call-a-script-from-another-script
+create directory: https://www.tutorialspoint.com/How-can-I-create-a-directory-if-it-does-not-exist-using-Python
+get directory name: https://www.geeksforgeeks.org/python-os-path-dirname-method/
+read excel file: https://www.geeksforgeeks.org/reading-excel-file-using-python/
+read excel file (xlrd library): https://xlrd.readthedocs.io/en/latest/api.html#module-xlrd
+logging: https://docs.python.org/3.7/howto/logging-cookbook.html
+logging: https://docs.python.org/3/library/logging.html#logging.basicConfig
+logging: https://realpython.com/python-logging/
+SMTP send Email: https://www.tutorialspoint.com/python/python_sending_email.htm
+SMTP send Email: https://docs.python.org/3/library/email.examples.html
+SMTP send Email: https://www.thepythoncode.com/article/sending-emails-in-python-smtplib
+IMAP read Email: https://www.thepythoncode.com/article/reading-emails-in-python
+send and read Email: https://gist.github.com/nickoala/569a9d191d088d82a5ef5c03c0690a02
+send and read Email: https://www.devdungeon.com/content/read-and-send-email-python
+
+
+Outlook access with Python:
+win32com read Email: https://stackoverflow.com/questions/22813814/clearly-documented-reading-of-emails-functionality-with-python-win32com-outlook
+win32com read Email: https://l1z2g9.github.io/2013/12/11/Read-mails-from-Outlook-using-python/
+win32com send Email: https://win32com.goermezer.de/microsoft/ms-office/send-email-with-outlook-and-python.html
+get Emails from a defined period: https://stackoverflow.com/questions/45425251/how-to-check-all-emails-that-came-in-within-a-time-period
+logon: https://docs.microsoft.com/de-de/office/vba/api/outlook.namespace.logon
+read multiple mailboxes: https://stackoverflow.com/questions/50395357/python-win32com-reading-multiple-outlook-inbox
+(pyOutlook: https://pythonhosted.org/pyOutlook/pyOutlook.html)
+
+Python Outlook shared mailbox
+https://stackoverflow.com/questions/24192252/python-sending-outlook-email-from-different-address-using-pywin32
+https://stackoverflow.com/questions/59618725/python-automated-outlook-email-change-sender-or-default-reply-to-address
+https://stackoverflow.com/questions/38876817/programmatically-send-outlook-email-from-shared-mailbox
+
+
+Autostart Python script or .exe 
+.exe: https://praxistipps.chip.de/windows-10-autostart-programme-hinzufuegen-so-klappts_42165
+script: https://www.geeksforgeeks.org/autorun-a-python-script-on-windows-startup/
+script: https://www.quora.com/How-do-I-run-a-Python-script-on-a-startup-on-Windows
+
+Outlook
+share mails: https://docs.marquardt.de/pages/releaseview.action?pageId=24198699
+multiple mailboxes: https://www.howtogeek.com/441374/how-to-manage-multiple-mailboxes-in-outlook/
+
+SMTP
+general: https://www.elektronik-kompendium.de/sites/net/0903081.htm
+
+IMAP
+general: https://www.elektronik-kompendium.de/sites/net/0903101.htm
+
+SMTP and IMAP:
+servers: https://www.systoolsgroup.com/imap/
+
+SMTP MQ IT information:
+Dok: https://docs.marquardt.de/display/public/UD/SMTP+client+configuration%3A+mail+server+names+and+aliases
+
+XML file access / validation:
+UTF-8 encoding table: https://www.utf8-chartable.de/unicode-utf8-table.pl?unicodeinhtml=hex
+xmltodict: https://www.programcreek.com/python/example/82408/xmltodict.parse
+lxml: https://lxml.de/validation.html
+lxml: https://www.kite.com/python/answers/how-to-validate-an-xml-file-with-an-xml-schema-in-python
+xmlschema: https://pypi.org/project/xmlschema/
+xmlschema: https://xmlschema.readthedocs.io/en/latest/api.html#xmlschema.validate
+xmlschema: https://stackoverflow.com/questions/11581351/how-to-get-multiple-errors-validating-xml-file-with-python-libraries
+Modify xml file: https://www.geeksforgeeks.org/modify-xml-files-with-python/
+Modify xml file: https://www.geeksforgeeks.org/how-to-parse-and-modify-xml-in-python/
+
+Excel conditional formatting
+formula: https://stackoverflow.com/questions/50866206/python-adding-to-excel-conditional-formatting-of-type-containstext
+doc: https://openpyxl.readthedocs.io/en/stable/formatting.html
+doc: https://openpyxl.readthedocs.io/en/stable/api/openpyxl.formatting.rule.html
+
+Excel data validation
+Remove: https://stackoverflow.com/questions/31860248/openpyxl-update-data-validation
+doc: https://openpyxl.readthedocs.io/en/stable/validation.html

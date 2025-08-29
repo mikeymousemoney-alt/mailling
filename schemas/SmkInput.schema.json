@@ -1,0 +1,125 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "object",
+    "properties": {
+        "$schema": {
+            "type": "string"
+        },
+        "Parameter": {
+            "type": "object",
+            "properties": {
+                "projectName": {
+                    "type": "string",
+                    "description": "name for the project could be defined as you want "
+                },
+                "projectFolder": {
+                    "type": "string",
+                    "description": "dummy "
+                },
+                "compiler": {
+                    "type": "string",
+                    "description": "dummy"
+                },
+                "derivative": {
+                    "type": "string",
+                    "description": "dummy"
+                },
+                "BRICK_ROOT_PATH": {
+                    "type": "string",
+                    "description": "dummy"
+                },
+                "WORKING_DIR": {
+                    "type": "string",
+                    "description": "dummy"
+                },
+                "DAVINCI_PROJECT_PATH": {
+                    "type": "string",
+                    "description": "dummy"
+                },
+                "SIP_PACKAGE": {
+                    "type": "string",
+                    "description": "Defines the path to the sip package that should used"
+                },
+                "MCAL_MODULES": {
+                    "type": "array",
+                    "description": "List of Parameters.",
+                    "items": {
+                        "type": "string",
+                        "description": "dummy"
+                    }
+                }
+            }
+        },
+        "Mappings": {
+            "type": "object",
+            "patternProperties": {
+                "^.*$": {
+                    "anyOf": [
+                        {"type": "string"},
+                        {"type": "null"}
+                    ]
+                }
+              },
+              "additionalProperties": false
+        },
+        "Bricks": {
+            "type": "object",
+            "patternProperties": {
+                "^.*$": {
+                    "type": "object",
+                    "properties": {
+                        "path": {
+                            "type": "string",
+                            "description": "Path to the SMK brick home directory"
+                        },
+                        "type": {
+                            "type": "string",
+                            "description": "Component type BSW, APP, CPP, ..."
+                        },
+                        "Parameter": {
+                            "type": "object",
+                            "description": "List of Parameters.",
+                            "patternProperties": {
+                                "^.*$": {
+                                    "anyOf": [
+                                        {"type": "string"},
+                                        {"type": "integer"},
+                                        {"type": "null"}
+                                    ]
+                                }
+                              },
+                              "additionalProperties": false
+                        }
+                    }
+                }
+            },
+            "additionalProperties": false
+        },
+        "Variants": {
+            "type": "object",
+            "patternProperties": {
+                "^.*$": {
+                    "type":"array",
+                    "items": {
+                        "type": "string",
+                        "description": "dummy"
+                    }
+                }
+            }
+        },
+        "Plugins": {
+            "type": "object",
+            "patternProperties": {
+                "^.*$": {
+                    "anyOf": [
+                        {"type": "object"},
+                        {"type": "integer"},
+                        {"type": "string"},
+                        {"type": "null"}
+                    ]
+                }
+            },
+            "additionalProperties": false
+        }
+    }
+}

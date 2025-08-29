@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"terminal.integrated.defaultProfile.windows": "Command Prompt",
+		"terminal.integrated.automationProfile.windows": {
+			"path": "${env:windir}\\Sysnative\\cmd.exe"
+		},
+		"Codegeex.Chat.LanguagePreference": "English",
+		"Codegeex.GenerationPreference": "automatic",
+		"Codegeex.Comment.LanguagePreference": "English",
+		"Codegeex.SidebarUI.LanguagePreference": "English"
+	}
+}

@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+# build-backend = "setuptools.build_meta"
+
+[project]
+name = "Vector_Issue"
+version = "255.255.255"
+authors = [
+    {name = "Dominik Schubert", email = "schubert.dominik@marquardt.de"}
+]
+description = "My Vector_Issue package description"
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["Vector_Issue"]
+license = {file = "LICENSE"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dynamic = ["dependencies", "optional-dependencies"]
+
+[project.scripts]
+Vector_IssueGui = "Vector_Issue.scripts.Vector_IssueGuiMain:main"
+Vector_IssueCmd = "Vector_Issue.scripts.Vector_IssueCmdMain:main"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+optional-dependencies.dev = { file = ["requirements-doc.txt", "requirements-dev.txt"] }
+optional-dependencies.doc = { file = ["requirements-doc.txt"] }
+
+
+
+[tool.setuptools.packages.find]
+where = ["src"]

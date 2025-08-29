@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<issueReport xsi:schemaLocation="urn:com:vector:pes:issuereport Interchange_Format_IssueReport_Security-v1.xsd" xmlns="urn:com:vector:pes:issuereportsecurity" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <schemaVersion>1</schemaVersion>
+    <reportData>
+        <title>Open Issues in 'CBD2100292-D04'</title>
+        <reportCreationDate>2024-06-11</reportCreationDate>
+        <reportSequenceNumber>7</reportSequenceNumber>
+        <reportIdentifier>CBD2100292-D04-2024-06-11-16:23:19</reportIdentifier>
+    </reportData>
+    <license>
+        <licenseNumber>CBD2100292</licenseNumber>
+        <customer>Marquardt India Pvt. Ltd.&#13;
+Package: MSR_Ford_SLP1 - in the project ''FORD WBC (Wireless Belt controller)''&#13;
+Micro: FS32K146HAT0VLLR&#13;
+Compiler: Green Hills 2017.1.4</customer>
+        <vectorContactEmail>Support@vector.com</vectorContactEmail>
+        <issueContactEmail>Vaibhav.Lokhande@marquardt.com </issueContactEmail>
+        <cybersecurityContactEmail>Vaibhav.Lokhande@marquardt.com </cybersecurityContactEmail>
+        <maintenanceExpiryDate>2022-06-01</maintenanceExpiryDate>
+        <reportingUntilDate>2026-02-15</reportingUntilDate>
+        <safetyReportingUntilDate>2026-02-15</safetyReportingUntilDate>
+        <cybersecurityReportingUntilDate>2026-02-15</cybersecurityReportingUntilDate>
+    </license>
+    <deliveries>
+        <delivery>
+            <releaseNumber>D04</releaseNumber>
+            <deliveryDate>2024-02-15</deliveryDate>
+            <slp>MSR_Ford_SLP1</slp>
+            <sip>26.07.05</sip>
+        </delivery>
+    </deliveries>
+    <issues>
+        <issue category="runtimeIssueWithoutWorkaround">
+            <identifier>ESCAN00117447</identifier>
+            <componentShortName>Dcm</componentShortName>
+            <package>Diag_Asr4Dcm</package>
+            <subpackage>Implementation</subpackage>
+            <severity>Critical</severity>
+            <issueClass>Issue in a released product</issueClass>
+            <safetyRelevant>false</safetyRelevant>
+            <cybersecurityRelevant>true</cybersecurityRelevant>
+            <headline>Service 0x24: Undefined behavior due to incompatible function pointer call</headline>
+            <problemDescription>What happens (symptoms):&#13;
+-------------------------------------------------------------------&#13;
+Anything might happen, as behavior is UNDEFINED. Undefined behavior may cause misbehavior anytime, even at unrelated locations.&#13;
+&#13;
+The DCM casts a pointer to a function to point to a function of a different type and dereferences it.&#13;
+According to the C90 standard, such an operation leads to undefined behavior:&#13;
+"A pointer to a function is converted to point to a function of a different type and used to call a function of a type not compatible with the original type (6.3.4)."&#13;
+&#13;
+&#13;
+When does this happen:&#13;
+-------------------------------------------------------------------&#13;
+Each time when a DID with gaps in the signal layout is requested via service 0x24 the wrong cast happens.&#13;
+&#13;
+&#13;
+In which configuration does this happen:&#13;
+-------------------------------------------------------------------&#13;
+DCM is configured to support scaling DIDs with gaps:&#13;
+at the beginning: (/Dcm/DcmConfigSet/DcmDsp/DcmDspDid/DcmDspDidSignal/DcmDspDidDataPos[&lt;Signal 0&gt;] != 0) or,&#13;
+anywhere: (DcmDspDidDataPos[&lt;Signal n&gt;] + DcmDspData/DcmDspDataSize [&lt;Signal n&gt;] != DcmDspDidDataPos[&lt;Signal n+1&gt;]) or,&#13;
+    any signal is explicitly configured to be a gap: (/Dcm/DcmConfigSet/DcmDsp/DcmDspData/DcmDspDataUsePort == USE_NO_DATA)&#13;
+AND&#13;
+- (/Dcm/DcmConfigSet/DcmDsp/DcmDspDataInfos/DcmDspDataScalingInfoSize &gt; 0)</problemDescription>
+            <resolutionDescription>Workaround:
+-------------------------------------------------------------------
+No workaround available.&#13;
+
+
+Resolution:
+-------------------------------------------------------------------
+The described issue is corrected by modification of all affected work-products. 
+</resolutionDescription>
+            <firstAffectedVersion>14.05.00</firstAffectedVersion>
+            <versionsFixed></versionsFixed>
+            <subpackageGuid>PCKG-9CC3DBE7-6ACC-4AB7-A9E7-C02578331D46</subpackageGuid>
+            <cfg5SearchQuery>definition=="/MICROSAR/Dcm/DcmConfigSet/DcmDsd/DcmDsdServiceTable/DcmDsdService/DcmDsdSidTabServiceId" &amp;&amp; value==36</cfg5SearchQuery>
+        </issue>
+    </issues>
+</issueReport>

@@ -1,0 +1,7 @@
+openpyxl
+pandas
+requests
+xmltodict
+pywin32 
+jira
+psutil

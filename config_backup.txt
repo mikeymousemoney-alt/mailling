@@ -1,0 +1,43 @@
+//// for testing set test_mode to 1, for production set test_mode to 0
+//// Notification Mails get send to the mail specified in test_mail
+test_mode: 1
+test_mail: fabio.merkt@marquardt.com
+test_name: Merkt, Fabio
+
+set_read: 0
+move_mails: 0
+change_to_C_partition: 1
+send_mails: 0
+
+mailbox_address: staging_PSIRT
+mailbox_folder: Posteingang
+folder_processed_mail_vector: Vector Issue Reports
+folder_processed_mail_others: Non Vector Reports
+email_subject: ////.*Vector.+Issue Report for CBD.+//// Filterd by the following subject empty means all mails are processed
+vector_mail_address: psirt@marquardt.com////VectorIssueReport@vector.com
+MIA_FILTER_NOSECURITY: .*Delivery information.+ , Test Mail
+folder_no_security: No_security
+VVM_API_URL: https://vvm.a.staging.asoc.marquardt.de/public-api/vulnerability-management/v1/vulnerabilities
+cybersecurity_manager_email: Fabio.Merkt@marquardt.com
+
+////possible values: Vector_Issues_Only, All_Emails
+config_mia_processing: All_Emails
+
+jira_project_key: SWTST016
+
+//// For test purposes the Partition is changed to C: For production (test_mode: false) it uses X:
+path_to_log_file: X:\ASR_Team\Vector\Microsar-Packages\Logs\VectorIssueReports_%s.log        //// %s will be exchanged by date and time of the start of the program  
+path_to_issue_report: X:\ASR_Team\Vector\Microsar-Packages\%s\%s\IssueReports       //// %s will be exchanged by first the CBDNumber and second the version
+
+autosar_projects_list: X:\ASR_Team\Autosarprojects.xlsx         //// following the important collumns inside this file 
+column_projectnumber: 0
+column_microsar_package_type: 1
+column_fbl_package_type: 2
+column_hsm_package_type: 3
+column_project_status: 4
+column_bsw_integrator: 5
+column_fbl_integrator: 6
+column_extern_integrator: 7
+column_microsar_package: 10
+column_fbl_package: 13
+column_hsm_package: 14

@@ -1,0 +1,56 @@
+//// for testing set test_mode to 1, for production set test_mode to 0
+//// Notification Mails get send to the mail specified in test_mail
+test_mode: 0
+test_mail: christopher.reimann@marquardt.com
+test_name: Reimann, Christopher
+
+set_read: 1
+move_mails: 1
+change_to_C_partition: 0
+send_mails: 1
+ASR_Functionality_Deactivated: 1
+create_tickets: 1
+
+mailbox_address: psirt@marquardt.com
+mailbox_address_staging: staging_psirt_cloud@marquardt.com
+////client, tenant, cert_thumbprint
+cert_thumbprint: 5e7cd4b328937655b4e0fae2dac8fe3e13477dde
+tenant_id: 9d0d2562-650f-4242-bc7c-df0c912f8d77
+client_id: 559bf877-2959-4840-bdda-02d73d5be6cb
+
+mailbox_folder_prod: Inbox
+mailbox_folder_staging: Posteingang
+folder_processed_mail_vector: Vector Issue Reports
+folder_processed_mail_others: Non Vector Reports
+email_subject: ////.*Vector.+Issue Report for CBD.+//// Filterd by the following subject empty means all mails are processed
+////Regex expression looking for @vector.com and vector-mail.com
+////vector_mail_address: christopher.reimann@marquardt.com
+vector_mail_address: VectorIssueReport@vector(-mail)?\.com$
+MIA_FILTER_NOSECURITY: .*Delivery information.+ , Test Mail, ^Automatic reply.*$, .*Vector Questionnaire.+
+folder_no_security: No_security
+VVM_API_URL_STAGING: https://vvm.a.staging.asoc.marquardt.de/public-api/vulnerability-management/v1/vulnerabilities
+VVM_API_URL_PROD: https://vvm.a.prod.asoc.marquardt.de/public-api/vulnerability-management/v1/vulnerabilities
+cybersecurity_manager_email: oliver.huppenbauer@marquardt.com
+vulnerability_manager_email: christopher.reimann@marquardt.com
+
+////possible values: Vector_Issues_Only, All_Emails
+config_mia_processing: All_Emails
+jira_project_key_staging: SWTST003
+jira_project_key_prod: SWBASE016
+
+//// For test purposes the Partition is changed to C: For production (change_to_C_partition: 0) it uses the pecified path (in this case X:)
+path_to_log_file: \\mqde01file01.marquardt.de\projekte\ASR_Team\Vector\Microsar-Packages\Logs\VectorIssueReports_%s.log        //// %s will be exchanged by date and time of the start of the program  
+path_to_issue_report: \\mqde01file01.marquardt.de\projekte\ASR_Team\Vector\Microsar-Packages\%s\%s\IssueReports       //// %s will be exchanged by first the CBDNumber and second the version
+
+autosar_projects_list: \\mqde01file01.marquardt.de\projekte\ASR_Team\Autosarprojects.xlsx         //// following the important collumns inside this file 
+column_projectnumber: 0
+column_microsar_package_type: 1
+column_fbl_package_type: 2
+column_hsm_package_type: 3
+column_project_status: 4
+column_bsw_integrator: 5
+column_fbl_integrator: 6
+column_extern_integrator: 7
+column_microsar_package: 10
+column_fbl_package: 13
+column_hsm_package: 14

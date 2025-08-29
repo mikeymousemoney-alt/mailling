@@ -1,0 +1,19 @@
+
+        <issueReport>
+            <reportData>
+                <reportIdentifier>1234-5678-91011</reportIdentifier>
+                <reportCreationDate>2023-10-01</reportCreationDate>
+            </reportData>
+            <issues>
+                <issue category="Cat1">
+                    <identifier>ISSUE-1</identifier>
+                    <package>package1</package>
+                    <firstAffectedVersion>1.0</firstAffectedVersion>
+                    <versionsFixed>1.1</versionsFixed>
+                    <headline>Issue 1 headline</headline>
+                    <problemDescription>Issue 1 description</problemDescription>
+                    <resolutionDescription>Issue 1 resolution</resolutionDescription>
+                </issue>
+            </issues>
+        </issueReport>
+        
